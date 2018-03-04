@@ -16,7 +16,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV SPARK_05
 
-U solvejumble%b		solvejumble.adb		cfba9f39 NE OO SU IL
+U solvejumble%b		solvejumble.adb		a2fbbbe2 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
@@ -53,7 +53,7 @@ D a-tiinio.ads		20140717063513 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
 D interfac.ads		20151118101227 4be8ce1b interfaces%s
 D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
-D solvejumble.adb	20180304224608 0ed47b29 solvejumble%b
+D solvejumble.adb	20180304230420 63955ff2 solvejumble%b
 D system.ads		20151123113124 6326c08a system%s
 D s-atocou.ads		20151020101020 b45c2d8d system.atomic_counters%s
 D s-conca2.ads		20140225151544 02a0d7d0 system.concat_2%s
@@ -91,22 +91,22 @@ X 10 a-string.ads
 X 12 a-strunb.ads
 76K21*Unbounded 489e26 20|9w18 9r45 10r18 10r53
 79R9*Unbounded_String<6|43R9> 473e14 20|13r44 14r46 15r19 16r17 22r21 34r46
-. 77r46 100r39 111r38 112r21 116r32 144r46 172r26
+. 77r46 100r39 111r38 112r21 116r32 144r46 173r26
 84V13*Length{natural} 20|45s12 49s15 53s15 57s15 61s15 65s15 70s12 82s25
 . 118s25 149s12 154s29
 94V13*To_Unbounded_String{79R9} 20|48s27 52s27 56s27 60s27 64s27 68s27 72s27
-. 174s28
+. 175s28
 100V13*To_String{string} 20|46s27 50s27 54s27 58s27 62s27 66s27
-123V14*"&"{79R9} 20|165s50
+123V14*"&"{79R9} 20|166s50
 139V13*Element{character} 20|105s21 106s22
 143U14*Replace_Element 20|107s9 108s9
-166V14*"="{boolean} 20|123s40 164s40
+166V14*"="{boolean} 20|123s40 165s40
 170V14*"="{boolean} 20|207s32
 X 13 a-suteio.ads
 39K31*Text_IO 61e34 20|10w28 10r63
 47U14*Get_Line 20|27s13
 50U14*Get_Line 20|44s9 206s9
-55U14*Put_Line 20|165s21
+55U14*Put_Line 20|166s21
 X 15 a-textio.ads
 49K13*Text_IO 471e16 20|7w10 7r27
 52P9*File_Type 20|21r16
@@ -114,10 +114,10 @@ X 15 a-textio.ads
 92U14*Open 20|24s9
 98U14*Close 20|31s9
 183V13*End_Of_File{boolean} 20|26s23
-263U14*Put_Line 20|43s9 71s13 83s9 86s13 151s13 205s9
+263U14*Put_Line 20|43s9 71s13 83s9 86s13 151s13 162s9 205s9
 X 20 solvejumble.adb
 12U11*solveJumble 12b11 211l5 211t16
-13A10 permutations(12|79R9)<integer> 17r23 111r120 122r22 144r89 160r48 171r58
+13A10 permutations(12|79R9)<integer> 17r23 111r120 122r22 144r89 160r48 172r58
 14A10 dictionaries(12|79R9)<integer> 18r22 20r52 160r82
 15r5 confirmation{12|79R9} 206m18 207r19
 16r5 userJumble{12|79R9} 196m21 196r21 199r25
@@ -170,15 +170,15 @@ X 20 solvejumble.adb
 144a64 permutationWords{13A10} 155m50
 145i9 stringLength{integer} 154m13 155r36
 146i9 elementToAdd{integer} 155m68 155r68
-160U15 findAnagram 160b15 160>27 160>62 169l9 169t20 202s9
-160a27 permutationWords{13A10} 162r18 164r20 165r30
-160a62 dictionaryWords{14A10} 163r22 164r42
-162i13 i{integer} 164r37 165r47
-163i17 j{integer} 164r58
-171U15 clearPermutations 171b15 171=33 178l9 178t26 193s9
-171a33 permutationWords{13A10} 175r18 176m13
-172r9 unboundedString{12|79R9} 174m9 176r36
-175i13 i{integer} 176r30
+160U15 findAnagram 160b15 160>27 160>62 170l9 170t20 202s9
+160a27 permutationWords{13A10} 163r18 165r20 166r30
+160a62 dictionaryWords{14A10} 164r22 165r42
+163i13 i{integer} 165r37 166r47
+164i17 j{integer} 165r58
+172U15 clearPermutations 172b15 172=33 179l9 179t26 193s9
+172a33 permutationWords{13A10} 176r18 177m13
+173r9 unboundedString{12|79R9} 175m9 177r36
+176i13 i{integer} 177r30
 X 21 system.ads
 67M9*Address
 X 30 s-memory.ads

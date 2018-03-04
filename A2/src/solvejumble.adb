@@ -2,7 +2,8 @@
 -- Date: March 4, 2018
 -- Description: Program that takes a jumble of letters and prints out the anagrams of that jumble of letters based on the small dictionary provided with Linux
 -- Sources: I used the algorithm at this link: https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/ 
---          This algorithm helped me find all the permutations of the letter jumble the user provides. Some additional modifications were required to use the algorithm in ADA. As a result this is not a direct copy of the code in the link, just a reference used to figure out how to get the permutations of the string.
+--          This algorithm helped me find all the permutations of the letter jumble the user provides. Some additional modifications were required to use the algorithm in ADA. 
+--          As a result this is not a direct copy of the code in the link, just a reference used to figure out how to get the permutations of a string efficiently.
 
 with Ada.Text_IO; use Ada.Text_IO;
 with ada.Integer_Text_IO; use Ada.Integer_Text_IO;
@@ -159,6 +160,7 @@ procedure solveJumble is
     
     procedure findAnagram(permutationWords: in permutations; dictionaryWords: in dictionaries) is
     begin
+        put_line("Anagrams for this jumble:");
         for i in permutationWords'Range loop
             for j in dictionaryWords'Range loop
                 if permutationWords(i) = dictionaryWords(j) then
@@ -179,14 +181,13 @@ procedure solveJumble is
 
 begin
  
-        
     -- Call buildLEXICON, which will build the dictionary of words to find anagrams in
     buildLEXICON(dictionaryWords);
     --for i in dictionaryWords'Range loop
-    --        if dictionaryWords(i) /= "" then
-    --            put_line("Dictionary Word: " & dictionaryWords(i));
-    --        end if;
-    --    end loop;
+    --    if dictionaryWords(i) /= "" then
+    --        put_line("Dictionary Word: " & dictionaryWords(i));
+    --    end if;
+    --end loop;
     
     loop
         -- Clear the permutations list with empty strings just in case...
