@@ -1,0 +1,190 @@
+V "GNAT Lib v6"
+M P W=b
+P SS ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_LOOPS
+RV NO_NESTED_FINALIZATION
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U solvejumble%b		solvejumble.adb		cfba9f39 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-charac.ads		20070912115821 2d3ec45b ada.characters%s
+D a-chahan.ads		20140611123156 1601a50f ada.characters.handling%s
+D a-chlat1.ads		20140225151544 66457d31 ada.characters.latin_1%s
+D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-finali.ads		20151020095656 bf4f806b ada.finalization%s
+D a-inteio.ads		20070406091342 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-string.ads		20070406091342 90ac6797 ada.strings%s
+D a-strmap.ads		20140611123156 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20140717072738 3f91d4c5 ada.strings.unbounded%s
+D a-suteio.ads		20090409150019 26d8e9aa ada.strings.unbounded.text_io%s
+D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-tiinio.ads		20140717063513 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20151118101227 4be8ce1b interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D solvejumble.adb	20180304224608 0ed47b29 solvejumble%b
+D system.ads		20151123113124 6326c08a system%s
+D s-atocou.ads		20151020101020 b45c2d8d system.atomic_counters%s
+D s-conca2.ads		20140225151544 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-finmas.ads		20151016130316 7811a767 system.finalization_masters%s
+D s-finroo.ads		20120426095924 4ff27390 system.finalization_root%s
+D s-imgint.ads		20090409150019 02dbe0c2 system.img_int%s
+D s-memory.ads		20140225151139 597d6634 system.memory%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
+D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stalib.adb		20140225151139 f2fe2716 system.standard_library%b
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20131010103753 b16154c2 system.storage_pools%s
+D s-stposu.ads		20151020120548 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20131014135145 aedef97e system.stream_attributes%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 20|7r6 7r23 8r6 8r31 9r6 9r33 10r6 10r41 11r6 11r35
+X 2 a-charac.ads
+16K13*Characters 18e19 20|11r10 11r39
+X 3 a-chahan.ads
+36K24*Handling 159e28 20|11w21 11r50
+70V13*To_Lower{string} 20|47s27 51s27 55s27 59s27 63s27 67s27
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[16|46] 20|8w10 8r35
+X 10 a-string.ads
+16K13*Strings 35e16 20|9r10 9r37 10r10 10r45
+X 12 a-strunb.ads
+76K21*Unbounded 489e26 20|9w18 9r45 10r18 10r53
+79R9*Unbounded_String<6|43R9> 473e14 20|13r44 14r46 15r19 16r17 22r21 34r46
+. 77r46 100r39 111r38 112r21 116r32 144r46 172r26
+84V13*Length{natural} 20|45s12 49s15 53s15 57s15 61s15 65s15 70s12 82s25
+. 118s25 149s12 154s29
+94V13*To_Unbounded_String{79R9} 20|48s27 52s27 56s27 60s27 64s27 68s27 72s27
+. 174s28
+100V13*To_String{string} 20|46s27 50s27 54s27 58s27 62s27 66s27
+123V14*"&"{79R9} 20|165s50
+139V13*Element{character} 20|105s21 106s22
+143U14*Replace_Element 20|107s9 108s9
+166V14*"="{boolean} 20|123s40 164s40
+170V14*"="{boolean} 20|207s32
+X 13 a-suteio.ads
+39K31*Text_IO 61e34 20|10w28 10r63
+47U14*Get_Line 20|27s13
+50U14*Get_Line 20|44s9 206s9
+55U14*Put_Line 20|165s21
+X 15 a-textio.ads
+49K13*Text_IO 471e16 20|7w10 7r27
+52P9*File_Type 20|21r16
+53n23*In_File{53E9} 20|24r19
+92U14*Open 20|24s9
+98U14*Close 20|31s9
+183V13*End_Of_File{boolean} 20|26s23
+263U14*Put_Line 20|43s9 71s13 83s9 86s13 151s13 205s9
+X 20 solvejumble.adb
+12U11*solveJumble 12b11 211l5 211t16
+13A10 permutations(12|79R9)<integer> 17r23 111r120 122r22 144r89 160r48 171r58
+14A10 dictionaries(12|79R9)<integer> 18r22 20r52 160r82
+15r5 confirmation{12|79R9} 206m18 207r19
+16r5 userJumble{12|79R9} 196m21 196r21 199r25
+17a5 permutationWords{13A10} 193m27 193r27 199m37 199r37 202r21
+18a5 dictionaryWords{14A10} 184m18 184r18 202r39
+20U15 buildLEXICON 20b15 20=28 32l9 32t21 184s5
+20a28 dictionaryWords{14A10} 29m13
+21p9 infp{15|52P9} 24m14 24r14 26r35 27r22 31m15 31r15
+22r9 tempString{12|79R9} 27m28 29r35
+25i13 i{integer} 29r29
+34U15 inputJumble 34b15 34=27 75l9 75t20 196s9
+34r27 userJumble{12|79R9} 44m18 45r19 46r37 48m13 49r22 50r37 52m13 53r22
+. 54r37 56m13 57r22 58r37 60m13 61r22 62r37 64m13 65r22 66r37 68m13 70r19
+. 72m13
+35a9 lowerCase1{string} 46m13 47m13 47r36 48r47
+36a9 lowerCase2{string} 50m13 51m13 51r36 52r47
+37a9 lowerCase3{string} 54m13 55m13 55r36 56r47
+38a9 lowerCase4{string} 58m13 59m13 59r36 60r47
+39a9 lowerCase5{string} 62m13 63m13 63r36 64r47
+40a9 lowerCase6{string} 66m13 67m13 67r36 68r47
+77U15 getPermutations 77b15 77>31 77=64 98l9 98t24
+77r31 userJumble{12|79R9} 82r32
+77i64 permutations{integer} 87m13 91m17
+78i9 stringLength{integer} 82m9 83r52 85r12 89r18
+79i9 n{integer} 89m13 92m17 92r22 93r27 94r34
+80i9 total{integer} 91r33 94m17 94r26
+100U15 swap 100b15 100=20 100>57 100>72 109l9 109t13 136s17 138s17
+100r20 tempString{12|79R9} 105r29 106r30 107m25 108m25
+100i57 i{integer} 105r41 107r37
+100i72 j{integer} 106r42 108r37
+101e9 tempChar{character} 105m9 108r40
+102e9 tempChar2{character} 106m9 107r40
+103i9 k{integer}
+111U15 permute 111b15 111>23 111>56 111>75 111=95 111=134 137s17 142l9 142t16
+. 155s13
+111r23 userJumble{12|79R9} 118r32 119r23
+111i56 start{integer} 120r12 136r34 137r37 138r34
+111i75 finish{integer} 120r20 135r24 137r46
+111a95 permutationWords{13A10} 123r20 129m17 137m54
+111i134 elementToAdd{integer} 129r34 130m17 130r33 137m72
+112r9 tempString{12|79R9} 119m9 123r42 129r51 136m22 136r22 137r25 138m22
+. 138r22
+113i9 i{integer} 135r19 136r41 138r41 139m17 139r22
+114i9 stringLength{integer} 118m9
+115i9 sameFlag{integer} 124m21 127r16 132m13
+116r9 tempPermutationString{12|79R9}
+122i17 l{integer} 123r37
+144U15 generateAnagram 144b15 144>31 144=64 158l9 158t24 199s9
+144r31 userJumble{12|79R9} 149r19 154r36 155r21
+144a64 permutationWords{13A10} 155m50
+145i9 stringLength{integer} 154m13 155r36
+146i9 elementToAdd{integer} 155m68 155r68
+160U15 findAnagram 160b15 160>27 160>62 169l9 169t20 202s9
+160a27 permutationWords{13A10} 162r18 164r20 165r30
+160a62 dictionaryWords{14A10} 163r22 164r42
+162i13 i{integer} 164r37 165r47
+163i17 j{integer} 164r58
+171U15 clearPermutations 171b15 171=33 178l9 178t26 193s9
+171a33 permutationWords{13A10} 175r18 176m13
+172r9 unboundedString{12|79R9} 174m9 176r36
+175i13 i{integer} 176r30
+X 21 system.ads
+67M9*Address
+X 30 s-memory.ads
+53V13*Alloc{21|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{21|67M9} 105i<c,__gnat_realloc>22
+X 36 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+
