@@ -1,4 +1,4 @@
--- Author: Jonas Bakelaar
+-- Author: Jonas Bakelaar (0964977)
 -- Date: March 4, 2018
 -- Description: Program that takes a jumble of letters and prints out the anagrams of that jumble of letters based on the small dictionary provided with Linux
 -- Sources: I used the algorithm at this link: https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/ 
@@ -26,7 +26,7 @@ procedure solveJumble is
         for i in 1..51244 loop
             exit when end_of_file(infp);
             get_line(infp, tempString);
-            --put the string into the array of dictionary words
+            -- Put the string into the array of dictionary words
             dictionaryWords(i) := tempString;
         end loop;
         close(infp);
@@ -43,6 +43,7 @@ procedure solveJumble is
 
         Put_Line("Input a string of characters to find anagrams for.");
         get_line(userJumble);
+        -- Converts the user jumble to lower case based on the length of the unbounded string.
         if length(userJumble) = 1 then
             lowerCase1 := To_String(userJumble);
             lowerCase1 := To_Lower(lowerCase1);
@@ -68,41 +69,21 @@ procedure solveJumble is
             lowerCase6 := To_Lower(lowerCase6);
             userJumble := to_unbounded_string(lowerCase6);
         end if;
+        
+        -- If the length of the user string is greater than 6, set it to an empty string to avoid errors.
         if length(userJumble) > 6 then
             Put_Line("String must be a max length of 6!");
             userJumble := to_unbounded_string("");
         end if;
 
     end inputJumble;
-    
-    procedure getPermutations(userJumble: in unbounded_string; permutations: in out integer) is
-        stringLength: integer;
-        n: integer;
-        total: integer := 0;
-    begin
-        stringLength := length(userJumble);
-        put_line("String length: " & integer'image(stringLength));
-        
-        if stringLength = 0 then
-            Put_Line("String length is zero! No permutations!");
-            permutations := 0;
-        else 
-            n := stringLength;
-            loop
-                permutations := total;
-                n := n - 1;
-                exit when n = 0;
-                total := total * n;
-            end loop;
-        end if;
-
-    end getPermutations;
    
     procedure swap(tempString: in out unbounded_string; i: in integer; j: in integer) is
         tempChar: character;
         tempChar2: character;
         k: integer := 0;
     begin
+        --Swaps characters of a string based on locations provided
         tempChar := Element(tempString, i);
         tempChar2 := Element(tempString, j);
         replace_element(tempString, i, tempChar2);
@@ -160,6 +141,7 @@ procedure solveJumble is
     
     procedure findAnagram(permutationWords: in permutations; dictionaryWords: in dictionaries) is
     begin
+        -- Loop through both arrays, finding words that are contained in both.
         put_line("Anagrams for this jumble:");
         for i in permutationWords'Range loop
             for j in dictionaryWords'Range loop
@@ -173,6 +155,7 @@ procedure solveJumble is
     procedure clearPermutations(permutationWords: in out permutations) is
         unboundedString: unbounded_string;
     begin
+        -- Set each element of the permutation array with empty strings for when a user does multiple word jumbles
         unboundedString := to_unbounded_string("");
         for i in permutationWords'Range loop
             permutationWords(i) := unboundedString;
@@ -181,25 +164,20 @@ procedure solveJumble is
 
 begin
  
-    -- Call buildLEXICON, which will build the dictionary of words to find anagrams in
+    -- Call buildLEXICON, which will build the dictionary of words to find anagrams in and populate the array of dictionary words.
     buildLEXICON(dictionaryWords);
-    --for i in dictionaryWords'Range loop
-    --    if dictionaryWords(i) /= "" then
-    --        put_line("Dictionary Word: " & dictionaryWords(i));
-    --    end if;
-    --end loop;
     
     loop
         -- Clear the permutations list with empty strings just in case...
         clearPermutations(permutationWords);
         
-        -- Call the input function, which gets a user submitted string of letters
+        -- Call the input function, which gets a user submitted string of letters.
         inputJumble(userJumble);
         
-        -- Call generateAnagram, to generate the anagrams of the word (use the link Jake sent you and reference it)
+        -- Call generateAnagram, to generate the anagrams of the word.
         generateAnagram(userJumble, permutationWords);
         
-        -- Use findAnagram in conjunction with the list of anagrams provided by generate anagram, searc the dictionary with it, print results.
+        -- Use findAnagram in conjunction with the list of anagrams provided by generate anagram, search the dictionary array (also passed through the function), print results.
         findAnagram(permutationWords, dictionaryWords);
        
         -- Ask the user if they'd like to quit.
